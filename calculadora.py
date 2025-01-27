@@ -5,9 +5,9 @@ class Calculadora:
     def __init__(self, root):
         self.root = root
         self.root.title("Calculadora")
-        self.root.configure(bg="#2b2b2b")  # Esto es el color del fondo
-        self.root.geometry("375x550")  # Esto es el tamaño de la ventana XxY
-        self.root.resizable(False, False)  # Esto es para que no puedan cambiar el tamaño
+        self.root.configure(bg="#2b2b2b")  
+        self.root.geometry("375x550")  
+        self.root.resizable(False, False)  
 
         self.entrada = tk.Entry(root, width=17, font=("Arial", 28), borderwidth=0, relief="solid",
                                 bg="#2b2b2b", fg="white", justify="right")
@@ -79,7 +79,7 @@ class Calculadora:
         elif valor == "←":
             entrada_actual = self.entrada.get()
             self.entrada.delete(0, tk.END)
-            self.entrada.insert(0, entrada_actual[:-1])  # Borra el último carácter
+            self.entrada.insert(0, entrada_actual[:-1]) 
         else:
             self.entrada.insert(tk.END, valor)
 
